@@ -1,367 +1,345 @@
-*{
-    overflow-x: hidden;
-  }
-  
-  
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-  body {
-      margin: 0;
-      padding: 0;
-      font-family: "Open Sans", sans-serif;
-      background-color: #fdfdfd;
-  
-    }
-    
-    header {
-      background-color: #fff;
-      padding:0px 90px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height:80px;
-      transition: 0.3s;
-      z-index:40;
-    }
-    
-    .logo img {
-      height: 70px;
-      width:120px;
-    }
-    
-    .toggle-btn {
-      flex-direction: column;
-      cursor: pointer;
-    }
-    
-    .bar {
-      width: 40px;
-      height: 3px;
-      background-color: #061C2C;
-      margin-bottom: 8px;
-    }
-    
-    @media only screen and (max-width: 768px) {
-      .toggle-btn {
-        display: flex;
-      }
-    }  
-   
-    /* hero */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .left,
-    .right {
-      position: absolute;
-      background-color: #234AC1; 
-      width:30%;
-      height: fit-content;
-    
-    }
-  
-    .left p {
-      text-align: center;
-      color: white;
-   
-    }
-  
-    .left {
-      top:auto;
-      left: 0;
-      z-index: 2;
-     
-    }
-  
-    .right {
-      top:auto;
-      right: 0;
-      background-color: #000000;
-      z-index: -2;
-      height: fit-content;
-    }
-  
-    .slider {
-   
-      display: flex;
-      transition: transform 0.5s ease-in-out; 
-      width: fit-content; 
-      height:auto;
-      padding:0 90px;
-     
-  }
-  
-  
-    img {
-      width: 100%;
-      background-size:contain;
-      object-fit: cover;
-    }
-  
-    .arrow {
-      position: absolute;
-      top:auto;
-      padding-bottom: 40%;
-      right: 10%; 
-      width: 40%;
-      height: 50px;
-      max-width: 100px; 
-      transform: translateY(-50%);
-      background: url("https://i.ibb.co/m93DhmY/Screenshot-2024-01-15-142720-removebg-preview.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-    
-  
-    .bubbles {
-      position: relative;
-      top:-30px;
-      left: 80%;
-      display: flex;
-    }
-  
-    .bubble {
-      width: 22px;
-      height: 22px;
-      display: inline-block;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin: 0 1px;
-      background-image: url('https://visiofund.co.za/wp-content/themes/visio/images/slider-dots.svg');
-    }
-  
-    .bubble.active {
-      opacity: 0.8;
-      transform: rotate(160deg);
-  }
-    
-  @media only screen and (max-width: 1200px){
-    .left,
-    .right {
-      position: absolute; 
-      width:30%;
-      height: fit-content;
-      top:auto;
-    
-    }
-   
-  
-    .left, .right p{
-  font-size: small;
-    }
-  }
-  
-  @media only screen and (max-width: 600px){
-    .slider{
-      padding:0 40px;
-     ;
-    }
-  header{
-    padding:0 40px;
-  }
-  .left, .right p{
-    font-size:xx-small;
-      }
-      .arrow {
-        padding-bottom: 35%;
-      max-width: 50px; 
-    }
-  
-  }
-  
-  
-    /* sub-hero*/
-    #sub-hero {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 120px; 
-      margin-bottom: 20px;
-    }
-  
-    .container-text {
-      display: flex;
-      width: 100%;
-    }
-  
-    .text1 {
-      width:70%;
-      font-size: 17px;
-      font-family: "Open Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-weight:300 ;
-      font-style: normal;
-      font-variation-settings: "wdth" 100;
-    }
-  
-    .image-svg {
-      width: 300px;
-      height: 30px;
-      background-image: url(https://visiofund.co.za/wp-content/themes/visio/images/asset32.svg);
-      background-size: contain;
-      background-position:center;
-      background-repeat: no-repeat;
-      margin-top: 34px;
-      
-    }
-  
-    @media only screen and (max-width: 948px) {
-      #sub-hero {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0 100px;
-      }
-      .contain{
-        padding: 0 100px;
-      }
-    
-      .container-text {
-        flex-direction: column;
-        text-align: center;
-      }
-    
-      .text1 {
-        width: 100%;
-        font-size: 14px;
-      }
-    
-      .image-svg {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        padding-left: 0%;
-        justify-content: center;
-        align-items: center;
-        width:auto;
-      }
-    
-      .box-big{
-        width: 100%;
-        font-weight: 200;
-        height: 150px;
-      }
-      .bubble{
-        width: 12px;
-      }
-    
-    }
-    
-  
-    /* boxes */
-    .contain {
-      padding: 0 120px; 
-  }
-  .box-big {
-    background-color: #061b2c;
-  padding-left: 20px;
-  width: auto;
-   
-  }
-  
-  .box-big span {
-    font-size: 50px;
-    font-weight: 600;
-    color:#2679AB;
-   
-  }
-  .box-big  h3{
-    color:#fff;
-    font-weight: 300;
-    padding-bottom: 6px;
-  }
-  
-  .container-1 {
-    gap:10px;
+* {
+  overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #fdfdfd;
+}
+
+header {
+  background-color: #fff;
+  padding: 0px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  transition: 0.3s;
+  z-index: 40;
+}
+
+.logo img {
+  height: 70px;
+  width: 120px;
+}
+
+.toggle-btn {
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 40px;
+  height: 2px;
+  background-color: #061C2C;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-btn {
     display: flex;
-    justify-content: space-between;
   }
-  .block{
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: #234AC1;
-    margin-top: 10px; 
-    width:100%;
-    height: 30px;
-    font-size: x-small;
-    color:#fff;
-    padding:0 4px;
-  
+}
+
+/* hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left,
+.right {
+  position: absolute;
+  background-color: #234AC1;
+  width: 30%;
+  height: fit-content;
+}
+
+.left p {
+  text-align: center;
+  color: white;
+}
+
+.left {
+  top: auto;
+  left: 0;
+  z-index: 2;
+}
+
+.right {
+  top: auto;
+  right: 0;
+  background-color: #000000;
+  z-index: -2;
+  height: fit-content;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: fit-content;
+  height: auto;
+  padding: 0 90px;
+}
+
+img {
+  width: 100%;
+  background-size: contain;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: auto;
+  padding-bottom: 50%;
+  right: 10%;
+  width: 40%;
+  height: 50px;
+  max-width: 100px;
+  transform: translateY(-50%);
+  background: url("https://i.ibb.co/m93DhmY/Screenshot-2024-01-15-142720-removebg-preview.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.bubbles {
+  position: relative;
+  top: -30px;
+  left: 80%;
+  display: flex;
+}
+
+.bubble {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 1px;
+  background-image: url('https://visiofund.co.za/wp-content/themes/visio/images/slider-dots.svg');
+}
+
+.bubble.active {
+  opacity: 0.8;
+  transform: rotate(160deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .left,
+  .right {
+    position: absolute;
+    width: 30%;
+    height: fit-content;
+    top: auto;
   }
-  .block span{
-    padding-top:4px;
-    color:#2679AB;
-    font-weight: 600;
-    font-size:20px;
+  .left,
+  .right p {
+    font-size: small;
   }
-  .block p {
-    margin: 0;
-    padding-top: 10px; 
-  }
-  
-  .foot{
-    height:100px;
-  }
-  /*  flexbox layout for small screens */
-  @media (max-width: 1050px) {
-  .container-1{
-    display: grid;
-   justify-content:stretch;
-   margin-bottom: 10px;
-  }
-  .block{
-    width: auto;
-  }
-  
-  }
-  @media (max-width: 749px) {
-    .contain {
-        display: flex;
-        flex-direction: column;
-      padding:0 100px;
-    }
-    .bubbles{
-    
-      left: 70%;
-  
-    }
-   
-  }
-  @media (max-width: 580px){
-  .contain{
+}
+
+@media only screen and (max-width: 600px) {
+  .slider {
     padding: 0 40px;
   }
-  #sub-hero{
-    padding:0 40px;
+  header {
+    padding: 0 40px;
   }
+  .left,
+  .right p {
+    font-size: xx-small;
   }
-  
-  @media (min-width: 750px) {
-    .contain {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-    .arrow{
-  height:30px;
-    }
-  
-   
+  .arrow {
+    padding-bottom: 35%;
+    max-width: 50px;
   }
-  
-    @media only screen and (max-width: 380px) {
-      .box-big{
-        width:100%;
-        justify-items: center;
-        margin-inline: auto;
-      }
-      .container-1{
-        margin-inline: auto;
-        display: grid;
-        width:100%;
-      }
-      
-    }
-  
+}
+
+/* sub-hero */
+#sub-hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+  margin-bottom: 20px;
+}
+
+.container-text {
+  display: flex;
+  width: 100%;
+}
+
+.text1 {
+  width: 70%;
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.image-svg {
+  width: 300px;
+  height: 30px;
+  background-image: url(https://visiofund.co.za/wp-content/themes/visio/images/asset32.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 34px;
+}
+
+@media only screen and (max-width: 948px) {
+  #sub-hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 100px;
+  }
+  .contain {
+    padding: 0 100px;
+  }
+  .container-text {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text1 {
+    width: 100%;
+    font-size: 14px;
+  }
+  .image-svg {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 0%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+  .box-big {
+    width: 100%;
+    font-weight: 200;
+    height: 150px;
+  }
+  .bubble {
+    width: 12px;
+  }
+}
+
+/* boxes */
+.contain {
+  padding: 0 120px;
+}
+
+.box-big {
+  background-color: #061b2c;
+  padding-left: 20px;
+  width: auto;
+}
+
+.box-big span {
+  font-size: 50px;
+  font-weight: 600;
+  color: #2679AB;
+}
+
+.box-big h3 {
+  color: #fff;
+  font-weight: 300;
+  padding-bottom: 6px;
+}
+
+.container-1 {
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block {
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: #234AC1;
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  font-size: x-small;
+  color: #fff;
+  padding: 0 4px;
+}
+
+.block span {
+  padding-top: 4px;
+  color: #2679AB;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.block p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.foot {
+  height: 100px;
+}
+
+/* flexbox layout for small screens */
+@media (max-width: 1050px) {
+  .container-1 {
+    display: grid;
+    justify-content: stretch;
+    margin-bottom: 10px;
+  }
+  .block {
+    width: auto;
+  }
+}
+
+@media (max-width: 749px) {
+  .contain {
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+  }
+  .bubbles {
+    left: 70%;
+  }
+}
+
+@media (max-width: 580px) {
+  .contain {
+    padding: 0 40px;
+  }
+  #sub-hero {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 750px) {
+  .contain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .arrow {
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .box-big {
+    width: 100%;
+    justify-items: center;
+    margin-inline: auto;
+  }
+  .container-1 {
+    margin-inline: auto;
+    display: grid;
+    width: 100%;
+  }
+}
