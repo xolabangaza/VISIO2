@@ -166,13 +166,14 @@ img {
 #sub-hero {
   display: flex;
   justify-content: space-between;
-  padding: 0 120px;
+  /* padding: 0 120px; */
+  padding-left: 88px;
   margin-bottom: 20px;
 }
 
 .container-text {
   display: flex;
-  width: 100%;
+  width: 96%;
 }
 
 .content{
@@ -196,6 +197,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 34px;
+  padding-left: 42px;
 }
 
 @media only screen and (max-width: 948px) {
@@ -211,6 +213,8 @@ img {
   .container-text {
     flex-direction: column;
     text-align: center;
+   
+
   }
   .text1 {
     width: 100%;
@@ -220,6 +224,7 @@ img {
     margin-top: 20px;
     margin-bottom: 10px;
     padding-left: 0%;
+    /* margin-right: 100px; */
     justify-content: center;
     align-items: center;
     width: auto;
@@ -228,6 +233,7 @@ img {
     width: 100%;
     font-weight: 200;
     height: 150px;
+    
   }
   .bubble {
     width: 12px;
