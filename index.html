@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>VISIO</title>
+</head>
+<body style="overflow: hidden;">
+    <header>
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="65" viewBox="0 0 160 65" fill="none">
+            <rect width="160" height="65" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_49_2" transform="matrix(0.00541667 0 0 0.0133333 -0.0254167 0)"/>
+            </pattern>
+            <image id="image0_49_2" width="194" height="75" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAABLCAIAAACtPM92AAASZklEQVR4Xu2ceXAU1RaH83CLESRiCKIspUSCRDZBBY2KEkoKUUGolEuVQoGiGBegpJCIilSxClWogIoxgKAiiooLaqFsIqUIKAqlkkTQBEIAo4bg/nhf+pxp22lmpqenB3jv3e+Prp7pc88959zfXXpYUg4aDAljZGQIACMjQwAYGRkCwMjIEABGRoYAMDIyBICRkSEAjIwMAWBkZAgAIyNDABgZGQLAyMgQAEZGhgAwMjIEgJGRIQCMjAwBYGRkCID/dxn9O8Rff/0lV4H7P//803ry9yP5CNr4CKFBWCHxkauEKjdcQT4Klq0iHgLHyEhhAOCPP/74/fffuXF+A9w4x0MbHyE0CCtCoiJgidnSzF8S8IEDB+R7vuGRNjAyShJa3dCQMAC7du3auHHjihUr3nnnnZUrV27YsKGqquqXX37hqZoeNTIiWoTCtbS09IMPPpg+ffrAgQOvv/76wsLCJUuWbNq0af/+/eSFgTY4CmVUXV1N3BMnTpw8eTLXSRbTpk3bs2cPFVcjz0i2NTU1M2fOxM+ECRPEITdTp06tqKhQOxfff//9+PHjH3rooUcsuOc6ZcoUpqOXwmEgg1FSUkLbzp07N2jQ4JhjjqlXr96/LI499tiTTjqpU6dO9957L9r69ddfZeRAXUQAz9Th888/HzdunMQm8HHGjBn4ibdKOBStcyUGPKxZs2b48OHnnHNOamoqAaekpBCwfUPkmZmZffv2nTt37u7duwnYbu5jgKLjR0aSDxO0T58+Vqn/hgEoKiryESUOf/vtt+XLl5944on4sUeRm5ycnJ9++kntXKxbt+64445z2hNDRkbG3r17iRPULgKEypRFr1Rc2jIGh4RRoaNu3bq98MILtbW1BKwuIiCjNX/+fAnMSVZWFhnF9BAGuSAdqsQMYbHJzc0lHrxFiZmnhA3NmjUbO3Yss5FOIWZZ4sWnjCgQ6n7++eePP/54ewiB+x49ejAwauoZmV79+/fHgyAOqREzOMrUFxlJ19KKJmjCo4wINT8//4QTTqCVtOWqg/BPxD+Qcs+ePXfs2KEuIkCJYOHChXZsNmeeeSYy4qmaeoNcKNHXX3995ZVXEjDiUHfW8nNIsKF3CYBry5YtGTKEGG/XMfEvI2BfIzJn6blnC1i/fr0soaBtYkFuW7ZsadSokfixadiw4RdffBFFRp988gnjqtYhTj311H379lkqiigjhMuCWlBQYAcfhlRfPzhgbFq1asVmqo4iQ/qsRtrMgcgoSmxhUBzh9ddfp+BRdBMdGqalpd13330//vijjKB2kDA+ZSRQplGjRrEYaJhWoCjpnnvuYZDAu4xIiQMWI6SOQlxzzTWUD1dq58ItI4YfGf3www8SpNq5wC1Tkz1Um4VwTgmu7jEjSE4bUZRtQ1LPPfecNnMQr4zoi3XoySefTE9PJzw7wnihIUlRrt69e5eXl3tJwSOJyoiXGgRuJyYyatGiRVlZGU+96F1c/fzzzxxjnWOGT5ZuXpfIliFXaxe+ZVRZWZmdnS1acUJzJsa55547ePDgESNG9OvX7+yzzyYwyZEblO3xZJOgjDDAA5D+nDlzqDNt7VJHIrqBDBBcffXVsrGC9pcAfmRkwwCzL+Tl5blD52WEp14qBVjyviqHa21vJdyuXTuWX7HRBi58y2jRokVyvNBmVo+05fzL3mGXGLlwzFq2bBnvE0R42mmnscmS9WGQEV0AxVm7dm3jxo3dReYbQPScoK+99lreAVmxnnnmmUcffXTIkCFMS946ydE9VciUVuxunNbxD9qlXxKSEYUgAlZ4d6AXXnihjISaRkA8YDZ06FBtaSEj+vDDD/OoTgtJkNEtt9yiDUJIQ96imf2MnzTnho9QU1OzYMGCWbNmWYNbhzqKTIIyojm97Nmzp2PHjoy6u8hIhEfFxcWsrPJ7I02AGwl49erVN9xwA6dVbRACV1Q4NTX12WefxfjIy4ggWDDatm3LGGiM1niwAr///vsxay2V4rjKLKeV08nJJ5/MoRsDazQDk5HtsEuXLlg6VyOKy6siGRGSbSbwkVrzPcPDvaAeI4NNgqsRnbKxyqppF4d7QmVpfOCBB1gpnSHZ0cpVAn7vvffYl521FXDL8YPiY6ld+iUhGQF5UneWDRG4BpiSwuxhgSENtYsABhwei4qKnG2BnHv16iU/IappBOKVET1SNTzzyiPG0gpIobCw0B4MbZAAuEpwNWIDZTppsxDUit3qiSeeQCKSjjZwIYlg8+WXX7Zv317bO0BJDz74ICOoDfwSwGpEGlu3bj3llFOcUiC+5s2bf/fdd2oaATLcv39/165dtVkIRnTevHkyomoagXhlxDd0yon+jDPOIGCnjLhnp5NO3Q19gKsEVyOmojNCgSk6bdo0pp+cB6L4sfLQn+lZ2tu0aaMuQlBn9gH2TW3gl0RlJDAtOOIRk0ZnDQnZzp49m1pIttrGQptZGa5YsYI3MruVwFLBfp8kGUFtbS1jKX3ZrZB+06ZNefek6DI9gBttGT809yEj6ZenpBA2ObkHtE78MTUEdala00bgmFG/fn2nQyBrTki4wiC6tygkuqkJdL948WJ0o6FZwTEwl156KQc9RiIsvrrkLKjFbbfd5kyMVsiRAwGPvCTmY1PjS6p2wQUXhPVbN0T16mVnZ/MSx4GPuSFi0pbxQ1sfMrKirouQF0bKqG0s+JiZmblt27Y6UXgedXEIZHTjjTc6s8Yh1eblX05I2GibOAlGRgx5dXV169atNbrQvOEY+Pbbb7sT5qMEvXPnTl5WncXininIXo5PiJmYv9UIRo4cSYQY261kNeVLHObk5IwZM2bz5s3sHdoghDryQCIyIvfhw4eLuLWZVZyCggLELTLCv7aJijgE7D/66CP5/UkgZfzzzdKlS93D5J1gZER8lHv06NEyMKBhpqTwwnnI1UhUwnIqE0KtLa666iq8qWks4pWRjRTUOUhh4AfP3bt3f+yxx3ghkoCZ0FF8huFbRlSMl4DLL7+ceeiECbZq1SrGW03jhIbM9vPPP1/dhWCne+WVV4jWe2phBCYjMt+0aRN5Uibn2GRkZJSWlmKgphaEy5BQqby8PGycskNVxcXFYfZR8C0jjvZ33313mILDwBXxsFlzHr/rrrs+/fRT95SIgj8Z0Qqoz+7du3c5YOXevn27x18+DwlumQa4raioUKcWeN63bx89YqCmcRKYjIA4brrpprD5zTBMnjxZDEAbHDxIOT777LPU1FSGCtQ6JYXDNUniSu1i4VtGFJTa9e/fXwIQ1IUD+ZKkSIRoBwwYwKxgIIlQ/IN6dEG+/lYjGrq3GD7ypaBfxQluxYl+DiHdQaSQYhKMjGzeffdd+69QCUz3Dh06cNAmVkZOzIiYaV1YWKhGDpj0mB0GGREDHfHmP2nSpEaNGrHkELYz8kg0adLE3gIE9egCGx8y+m8kYBnxgtOxY0cmrhbMGlR2X97q0Q2IGRVkJWCnUKMQvPmLJWMsljFJREaIVa5lZWX3339/VlaWFxnRHTv1hx9+KP5BPbowMvIJozJhwgSnjGSKDxo0iKlvi4P6LlmyhIXK3kew4Z6XcJYHZISBWMbEt4zsXYm+gI+c1VavXs370VlnnSXxyMmJe/tqI6GSUZRQeeRvUxN9W9Ep9vf4tMsYLzQUz2Ex81HcSkc+CF5GX331FZNVCxaCo3dJSQk5iBnhbt261fkzP4PEmPn4Hcy3jMIQYyBIxnj58uU333wz66hoPUxDwptvvinRqgsXPPV3xCYGzo5z5syZOHHilClTOFxyZfPlGtfBMQzmJ24XLlyIHyf4ZziOIhmRIe/qnEO1YCEYjHHjxtn5S6UGDhyoj62TePPmzcvLy3kE3vMJUEb0SylZNUlBruvXr+/bty+xuWXEN3feeSdZBC4jvscnvffp00eWQxApc4BbsGCBbxnhtrKyskWLFngLY/HixVbhj+ibmg0ZInk2LIbWLgFQgrZt21ZXV9cNbGjA1q1bx2FI0sBg2LBhNBcDUI+xCHY1khuuUlMgHZaEsC6E9u3bsw9iYzk4BDzyJyOgLYsE/ToVTEl79uy53/pnQ6ANYmE7pLzz5893jgu6pFzNmjXjSMrTKLlEJ/hNjbpzaMjNzQ3LH8W8+uqrzpSYcJdccglznUzIh0MrX6ojzwQlozCkLRBqbW1t165dnekILJ/0EqX0PPItI9i4cSO7qrNfUktLS3vrrbcoFKXGRtvEAmOC4QWoU6dOlFrdWQ65FhQUEE9cDsMIWEbECgT0+OOPIx2JUuA+Pz9f8hcb7ufNmycTjhMra9XhlBGPCENs5EYfWMj3IHGOHj3aOYkFdoeqqipstI0L3CYiIzZW92sv5OTkyB+BycBzoy1d2I9Igek9fvx4Su2UEeBfliLpVOzjJWAZCUS/bdu2Jk2aaKRW/iSQnp7O90Rsp8drP69FPOX8KPKS773jW0Z0R2XZlbgSEh/1wT/BA4+QkXp30KZNG5nEauqCdHzIyIaoZsyY4ZSRTe/evXft2iUVixKAqIcrJ+vZs2eztml7B926dUOv2sAvSZERBSIy5wkakBEDzIRwyogkx4wZ07hxY5EXyPfe8S0jYli1ahUn6LKyMrbXSIOBGVH16NFDvTvo168faSZPRngmi+zsbG0WggTRFgdw1iQKGFNGaGj69Onuv0oLrEwvv/wy6WsDvyRRRsuWLZM/69CQLTiWyt+VEUtKsHnzZgRHthQd5HvvxCsjuqB3+t25c2eXLl3Yqjp37rx27VoZD2mCAWZ85MpHDm0kot4dcPTGBtS1C5onIiNCAvk3pSTlrCQyIvJ27dq99tpr1JOOwsA5V5ozP2+99VYOpmGbMrMarrjiCtbjKCl4JFkyYiSoFAc6kidcjd36nXrRokV23FgyVyoqKmLWNBLxyoiuiY1O0S6DgTH1zcjIKCwsZFniewwYAK7MUXjjjTcYdXEr/kmHJgiLrkWR6toFfhLc1JiNhDRo0CDRjbZ3wD6Vl5c3d+7c0tJS3mywB17lmCQrV6684447KIW7ISmQTsuWLeWfkkZJwSNJlBFTYerUqXWad72y2nHLjME4Zk0j4WM1osennnoKQRMY8Uh4XDMzM6+77jrWGA7+8Mgjj1x22WX2TxLiHGjCoPKOWVNTI5pT1y4SlBHN8U9xOAZddNFF2vifEAyxETx7FtsfZt27d2eV5ZwgyhPUOgRNGjZsyEomxY+SgkeSIiMgMmBFlX/yoeFbo8U8/uabb3gqNRJLbRY/PmRE7/ITHME4Y/MI3TFm7DWioShq4GkiMrLCr9ubWBTZ+jnRE7C/mAUaCqxhHN5Zt2LG4JFkyUig0MOGDXPOBqrALBk7diyliT6VPeJDRjt27JB/oiloM88wDQYMGMCJRD1GJkEZ2bBmMOTMydzcXIrpI2aB4tOcHZy3NuqPW+0gYZIuozVr1jjfEazpVC8rK4tXfdJInozwf0gZsf5RwaqqKg6e8huuNvMMx9Ly8nJSU48RoGtsIsnoR+s/Y1DTWBAztQJOPEOGDAnL1ztMYE6r8jMvRy6kqR0kTNJlZP+iXTfxHSxdujSQXfnjjz+WU44TTgaRViMbxFRUVMTuhj3xME0PqSq+wYCnQEf5+fmVlZW4jRk5uTPwyIjBs4JScMgsiktGAvYy/MXFxa1btyYePBMzaKwuJHhkx7VBgwbsDPIbQZSy+CO5MrKm0O9PP/00JySG1qZp06ZDhw4NZF2V1Y6NhjEW2PhPP/30SKuRDeNBACUlJSNHjiQemeKUWwbARhSWlpZ28cUXv/TSS7QS9cdcjTDA7MUXX3TGBnyUP16M6SEMchElAZNk1qxZ5513nkjErX5Bgqfgt99+u/1ShpMoZfFHcmVEuJaQ6v4LLLmxkV+P4i2lmwMHDmy3+M6Cm2+//ZYrnutEFLleUlDghiWT15ZRo0b16tWrQ4cOrVq1Yt9hsNm/Bg8ePHPmzC1btmBG2FxBGqqjCNA1CbLqlJWVSWyCFex2HsX0EIZ0Su+0lebsShs2bJg0aZL8tyfp6emi1Pr16zOReGsbMWIEq/7evXvtsOUK6jQgkiujw49IR9CvoqKm1kSnxCJxGSQWHqv4KkfQNkcNEpVEHoYtNbHRBknDyEih6FSfusuNLSbu1eIolhFLMisTNzbEzw7Ajdhog6RhZBQNGRL9cLTKyE1Y2KANksb/mowMRwQjI0MAGBkZAsDIyBAARkaGADAyMgSAkZEhAIyMDAFgZGQIACMjQwAYGRkCwMjIEABGRoYAMDIyBICRkSFhDh78Dzo4GIj5BslBAAAAAElFTkSuQmCC"/>
+            </defs>
+        </svg>
+        </div>
+        <div class="toggle-btn" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </header>
+  <main>
+  <section class="hero">
+
+    <div class="left"><p>LOOK BEYOND THE ORDINARY</p></div>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="https://i.ibb.co/MyTYwGy/stock-market-background-hc6p0ln57y4sjujx.jpg" alt="Image 1">
+        <img src="https://i.ibb.co/MyTYwGy/stock-market-background-hc6p0ln57y4sjujx.jpg" alt="Image 2">
+        <img src="https://i.ibb.co/MyTYwGy/stock-market-background-hc6p0ln57y4sjujx.jpg" alt="Image 3">
+        <img src="https://i.ibb.co/MyTYwGy/stock-market-background-hc6p0ln57y4sjujx.jpg" alt="Image 4">
+      </div>
+      <div class="arrow next"></div>
+      <div class="bubbles"></div>
+    </div>
+    <div class="right"><p>LOOK BEYOND THE ORDINARY</p></div>
+  </section>
+
+<section id="sub-hero">
+  <div class="container-text">
+    <div class="text1">
+      <p>Visio is an investment management firm initially founded by Patrice Moyal in 2003. The nimble,
+        highly focused and dynamic team manage assets across listed strategies for a diversified client
+        base that includes some of the world's largest and most sophisticated investors.</p>
+    </div>
+    <div class="image-svg">
+    </div>
+  </div>
+</section>
+
+      <section>
+        <div class="contain" id="content">
+        <div class="box">
+          <div class="box-big">
+      <span >></span>
+        <h3>THE VISIO <br>DIFFERENCE</h3>
+          </div>
+          <div class="container-1">
+            <div class="block" >
+              <p>HEDGE FUNDS</p> <span style="justify-content:right;" >></span>
+           
+            </div>
+            <div class="block">
+              <p>UNIT TRUSTS</p> <span >></span>
+              
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-big">
+            <span >></span>
+
+
+            <h3>MEET THE<BR> VISIO TEAM</h3>
+          </div>
+          <div class="container-1">
+            <div class="block" >
+              <p>SEGREGATED MANDATES</p>  <span>></span>
+
+            </div>
+            <div class="block" > 
+              <p>AFRICA FUNDS</p>
+                <span >></span>
+              
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-big">
+            <span>></span>
+
+            <h3>OUR FUNDS AND<BR> INVESTMENTS</h3>
+          </div>
+          <div class="container-1">
+            <div class="block">
+              <p>FUND PERFOMANCE</p>
+              <span>></span>
+            </div>
+            <div class="block">
+              <p>RISK MANAGEMENT</p> <span>></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </main>  
+<footer>
+  <div class="foot">
+    
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+     <script src="index.js"></script>
+</body>
+</html>
