@@ -110,7 +110,7 @@ img {
 
 .bubbles {
   position: relative;
-  top: -30px;
+  top: -40px;
   left: 80%;
   display: flex;
 }
@@ -369,5 +369,9 @@ img {
     margin-inline: auto;
     display: grid;
     width: 100%;
+  }
+  .bubbles{
+    top: -30px;
+    left: 200px;
   }
 }
