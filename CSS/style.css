@@ -197,8 +197,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 34px;
-  margin-left: 40px;
-  padding-left: 80px;
+  margin-left: 114px;
+  /* padding-left: 80px; */
 }
 
 @media only screen and (max-width: 948px) {
@@ -308,9 +308,24 @@ img {
   .block {
     width: auto;
   }
-  .img-svg{
-    padding-left: 10px;
+  .text1{
+    padding-right: 60px;
   }
+  .image-svg{
+    margin-left: 0;
+  }
+  
+}
+@media only screen and (min-width: 949px) {
+  .image-svg {
+    margin-right: 50px; /* Adjust this value as needed */
+  }
+}
+@media screen and (min-width: 1346px) {
+  .image-svg{
+    margin-left: 110px;
+  }
+  
 }
 
 @media (max-width: 749px) {
